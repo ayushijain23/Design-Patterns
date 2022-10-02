@@ -15,7 +15,7 @@ public class MainLogging {
        setupLoggersChain();
        logger.log(Loggers.info, "Just for information");
        logger.log(Loggers.error, "oh no ! Error again");
-       logger.log(Loggers.debug,"developers love debugging");
+       logger.log(Loggers.debug,"developers love debugginggg");
         logger.log(4, "developers love debugging");
     }
 }
