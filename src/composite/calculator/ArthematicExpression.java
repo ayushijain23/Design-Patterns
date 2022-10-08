@@ -1,0 +1,33 @@
+package composite.calculator;
+
+public class ArthematicExpression implements Expression{
+
+    Expression leftExpression;
+    Expression rightExpression;
+    Operation operation;
+
+    public ArthematicExpression(Expression leftExpression, Expression rightExpression, Operation operation) {
+        this.leftExpression = leftExpression;
+        this.rightExpression = rightExpression;
+        this.operation = operation;
+    }
+
+    @Override
+    public int evaluate() {
+         switch(operation){
+            case ADD:
+            return leftExpression.evaluate() + rightExpression.evaluate();
+
+             case SUBTRACT:
+                 return leftExpression.evaluate() - rightExpression.evaluate();
+
+             case MULTIPLY:
+                 return leftExpression.evaluate() * rightExpression.evaluate();
+
+             case DIVIDE:
+                 return leftExpression.evaluate() / rightExpression.evaluate();
+        }
+
+        return 0;
+    }
+}
